@@ -1,0 +1,25 @@
+.nav {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: large;
+  font-weight: 700;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 80px;
+}
+
+.auth {
+  margin-left: auto;
+  font-weight: 400;
+  font-size: medium;
+  color: #0070f3;
+}

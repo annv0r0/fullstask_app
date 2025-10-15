@@ -1,0 +1,82 @@
+.container {
+  border: 2px solid gray;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  background-color: #181818;
+  overflow: hidden;
+}
+
+.container_card :hover {
+  border-color: #3a3a3a;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.imageWrapper {
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  background-color: azure;
+}
+.image {
+  display: block;
+  height: 'auto';
+  object-fit: cover;
+  width: 100%;
+}
+
+.card {
+  font-size: 12px;
+  padding: 10px;
+}
+
+.card > p {
+  margin-top: 10px;
+}
+
+.btns {
+  display: flex;
+  gap: 8px;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.add__btn,
+.remove__btn {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 8px;
+  padding: 5px;
+  transition: background-color 0.3s ease;
+  width: 40px;
+}
+
+// .container_detail {
+//   border: none;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+// }
+
+// DETAIL
+.container_detail {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 24px;
+  padding: 80px;
+  border: none;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+
+  .imageWrapper {
+    height: 400px;
+  }
+}

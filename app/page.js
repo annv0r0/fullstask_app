@@ -1,95 +1,43 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import s from './page.module.scss';
+import Image from 'next/image';
 
-export default function Home() {
+export default async function Home() {
+  // <SaveItem />
+  // - upload csv (article/id, title, description, wight, price/kg, description, availible, raiting)
+  // - upload image
+  // - send (save to BD) btn
+
+  // <ItemsList />
+  // - list of items from BD
+  // <AddToCart/> btn
+
+  // <AddToCart /> btn
+  // - db.take(article)
+  // - add to cart (?)
+
+  // <ShoppingCartPreview />
+  // - list of picked items
+  // -- amount of item
+  // -- <ChangeAmount /> btns
+  // -- <DeleteItem /> btn
+  // - total ammount
+  // - <GoToCart /> btn
+
+  // <ShoppingCart /> the same as  <ShoppingCartPreview /> but:
+  // - different design
+  // - <ProceedToCheckout /> btn instead of <GoToCart /> btn
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <main className={s.main}>
+      <h1 className={s.title}>SUPER-DUPER FULLSTACK-APP</h1>
+      <div className={s.imageWrapper}>
+        <Image className={s.hero} src="https://cdn.thesimpsonsapi.com/500/episode/1.webp" alt="hero" fill></Image>
+      </div>
+      <p className={s.blurb}>
+        Track meals and spending in seconds. Upload receipts or CSVs, we parse them into items and expenses, store
+        everything securely, and surface a clean dashboard with recent purchases, monthly budget, and a ready-to-use
+        shopping list. Sign in with email or socials and start planning smarter.
+      </p>
+    </main>
   );
 }
